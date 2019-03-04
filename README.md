@@ -1,30 +1,25 @@
-# Webpack Frontend Starterkit
+# Crowd Assemble
 
-A lightweight foundation for your next webpack based frontend project.
+Created in order to act much like Meetup.
 
 
-### Installation
+### Use of the Meetup API ( Application Progamming Language.)
 
-```
-npm install
-```
+Usage to the Meetup API. In order to create the Crow Assemble web appplication.
 
-### Start Dev Server
+### Web Pack
 
 ```
-npm start
+Web pack usage in order to bundle the application 
 ```
 
-### Build Prod Version
+### Web components 
 
 ```
-npm run build
+Web components usage in order to seperate logic from the UI
 ```
 
-### Features:
-
-* ES6 Support via [babel](https://babeljs.io/) (v7)
-* SASS Support via [sass-loader](https://github.com/jtangelder/sass-loader)
-* Linting via [eslint-loader](https://github.com/MoOx/eslint-loader)
-
-When you run `npm run build` we use the [mini-css-extract-plugin](https://github.com/webpack-contrib/mini-css-extract-plugin) to move the css to a separate file. The css file gets included in the head of the `index.html`.
+### Error message
+```
+ Error messages displayed when Links cannot be reached.
+ ```
