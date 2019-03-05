@@ -17,7 +17,8 @@ $(function (parameter) {
     
     $.ajax({
         type: 'GET' ,
-        url: `${proxyUrl}${baseUrl}find/groups?key=${key}&category=${category}&sign=true`,
+       // url: `${proxyUrl}${baseUrl}find/groups?key=${key}&category=${category}&sign=true`,
+       url: `${proxyUrl}${baseUrl}find/groups?key=${key}&category=1,2,3&sign=true`,
         success: function(groups) {
             $items.find('.spinner-border').addClass('d-none');
 
