@@ -15,93 +15,85 @@
 </head>
 
 <body class="container-fluid">
-    <div class="jumbotron">
-        <div class="text-left"><img src="src/fox.png" class="text-left img-fluid" alt="Responsive image"></div>
-          <p class="logo text-left"> Crowd Assemble</p>
-          <p class="text-right fixed-top "><a href="https://www.facebook.com/meetup/">
-          <img class="img-fluid" alt="FB logo" src="src/fb.png" /></a>
-          <a href="https://www.instagram.com/meetup/?hl=en">
-          <img class="img-fluid" alt="insta logo" src="src/instagram.png" /></a>
-          <a href="https://twitter.com/Meetup?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
-          <img class="img-fluid" alt="insta logo" src="src/twitter.png" /></a>
-      </p>
-      </div>
+  <div class="jumbotron">
+    <social-tag></social-tag>
+  </div>
+
   <div class="text-center general-text">
-    <div><img src="src/chevron.png" class="text-left img-fluid" alt="Responsive image"> Assembly Seek Below <img src="src/chevron.png" class="text-left img-fluid" alt="Responsive image"></div> 
+    <div><img src="src/chevron.png" class="text-left img-fluid" alt="Responsive image">
+      Assembly Seek Below <img src="src/chevron.png" class="text-left img-fluid" alt="Responsive image"></div> 
   </div>
 
   <br/>
   <br/>
 
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <div class="container">
-          <div class="row">
-            <div class="card text-center">
-              <div class="card-header">
-                <ul id="calendars" class="text-left"></ul>
-              </div>
-              <div class="card-body">
-                <ul id="titles" class="card-title"></ul>
-                <div id="bodies"></div>
-                  <a href="index.html" class="btn btn-primary">Back to Events </a>
-                </div>
-              <div class="card-footer text-muted" id="times" ></div>
+  <div class="row">
+    <div class="col-sm-4 col-md-3">
+      <div class="container">
+        <div class="row">
+          <div class="card text-center">
+            <div class="card-header bg-white">
+              <ul id="calendar" class="text-left bg-white">
+                <h3 class="text-center  bg-white ">Event Organizers</h3>
+              </ul>
             </div>
-          </div>
-
-          <br/>
-
-          <div class="row mt-6">
-            <div class="col">
-              <div class="container">
-                <div class="row">
-                  <div class="card text-center">
-                    <div class="card-header bg-white">
-                      <ul id="calendar" class="text-left bg-white">
-                        <h3 class="text-center  bg-white ">Event Organizers</h3>
-                      </ul>
-                      </div>
-
-                      <div class="card-body bg-white" id="members">
-                        <ul id="title" class="card-title"></ul>
-                      </div>
-                      <div class="card-footer text-muted  bg-white " id="time" >   
-                        <div class="dropdown  bg-white ">
-                        <button class="btn btn-primary dropdown-toggle btn btn-light  bg-white " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Change Pages
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="index.html">Home Page</a>
-                            <a class="dropdown-item" href="about.html">Group Detail Page</a>
-                        </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div> 
+            <div class="card-body bg-white" id="members">
+              <ul id="title" class="card-title"></ul>
+            </div>
+            <div class="card-footer text-muted  bg-white " id="time" >   
+              <div class="dropdown  bg-white ">
+                <button class="btn btn-primary dropdown-toggle btn btn-light  bg-white " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Change Pages
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="index.html">Home Page</a>
+                  <a class="dropdown-item" href="about.html">Group Detail Page</a>
                 </div>
               </div>
           </div>
         </div>
-      </div>
-
-      <div class="col  bg-white ">
-        <div class="card  bg-white ">
-          <div class="card-header bg-white">
-            <p class="heading  bg-white ">Group Details </p>
-          </div>
-          <div class="card-body bg-white">
-            <div id="groups" class="text-center">
-              <div class="spinner-border text-dark" role="status">
-                <span class="sr-only">Loading...</span>
-              </div>
-             </div>
-          </div>
-        </div>
-      </div>
+      </div> 
   </div>
 </div>
+
+<div class="col-sm-4 col-md-3">
+    <div class="container">
+      <div class="row">
+        <div class="card text-center">
+          <div class="card-header bg-white">
+            <ul id="times" class="text-left bg-white">
+              <h3 class="text-center  bg-white ">Events</h3>
+            </ul>
+          </div>
+          <div class="card-body bg-white" id="">
+            <ul id="" class="card-title"></ul>
+          </div>
+          <div class="card-footer text-muted  bg-white " id="" >   
+            <div class="dropdown  bg-white ">
+              <button class="btn btn-primary dropdown-toggle btn btn-light  bg-white " type="button" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Change Pages
+              </button>
+            </div>
+        </div>
+      </div>
+    </div> 
+</div>
+</div>
+
+  <div class="col-sm-4 col-md-6 bg-white ">
+    <div class="card  bg-white ">
+      <div class="card-header bg-white"><p class="heading  bg-white ">Group Details </p></div>
+      <div class="card-body bg-white">
+        <div id="groups" class="text-center">
+          <div class="spinner-border text-dark" role="status">
+          <span class="sr-only">Loading...</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
   <ul id="group"></ul>
 </body>
 </html>

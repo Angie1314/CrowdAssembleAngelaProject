@@ -53,6 +53,12 @@ $max-widths: 800px;
   background-color:rgb(72, 81, 214);
 
 }
+
+.col-sm-4 {border:1px rgb(95, 92, 92);}
+.well {height:200px;}
+.height1 {height:500px}
+.height2 {height:4600px}
+
 .pagination {
   float: left;
   }
@@ -68,5 +74,25 @@ $max-widths: 800px;
   @media (min-width: #{$max-widths}) {
     @content;
     word-wrap: break-word;
+  }
+}
+
+@media (min-width:768px) {
+  .inline-block-row {
+      word-spacing: -1em;
+      letter-spacing: -1em;
+      overflow:hidden;
+  }
+  .inline-block-row .col-sm-4 {
+      word-spacing: normal;
+      vertical-align: top;
+      letter-spacing: normal;
+      display: inline-block;
+      float:none;
+  }
+}
+@media (min-width:992px) {
+  .inline-block-row .col-md-3 {
+      float:none;
   }
 }

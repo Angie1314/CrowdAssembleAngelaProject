@@ -17,20 +17,8 @@
 </head>
 
 <body class="container-fluid">
-  <script src="../../components/calendarCreation.js"></script>
-  <script src="../../components/cards.js"></script>
-  
- 
-    <div class="jumbotron">
-      <div class="text-left"><img src="src/fox.png" class="text-left img-fluid" alt="Responsive image"></div>
-        <p class="logo text-left"> Crowd Assemble</p>
-        <p class="text-right fixed-top "><a href="https://www.facebook.com/meetup/">
-        <img class="img-fluid" alt="FB logo" src="src/fb.png" /></a>
-        <a href="https://www.instagram.com/meetup/?hl=en">
-        <img class="img-fluid" alt="insta logo" src="src/instagram.png" /></a>
-        <a href="https://twitter.com/Meetup?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
-        <img class="img-fluid" alt="insta logo" src="src/twitter.png" /></a>
-    </p>
+    <div class="jumbotron" id="social">
+    <social-tag></social-tag>
     </div>
     <div class="text-center general-text">
       <div><img src="src/chevron.png" class="text-left img-fluid" alt="Responsive image"> Assembly Seek Below <img src="src/chevron.png" class="text-left img-fluid" alt="Responsive image"></div> 
@@ -38,21 +26,62 @@
 
   <br/>
   <br/>
+  <div class="container-fluid">
+      <div class="row inline-block-row ">
+         <div class="col-sm-4 col-md-3">
+            <div class="well height1" id="calendar">
+                <capone-slider></capone-slider>
+            </div>
+         </div>
+         <div class="col-sm-4 col-md-6 height2 ">
+            <div class="well">
+              <div class="card text-right">
+                <div class="card-header">
+                  <div class="spinner-border text-dark" role="status"></div>
+                  <ul id="member" class="text-left"><h3 class="text-left heading2">Categories</h3></ul></div>
+                  <div class="card-body" id="photos"><ul id="title" class="card-title"></ul></div>
+                  <div class="card-footer text-muted heading" id="time" >Categories </div>
+              </div>
+            </div>
+         </div>
+         <div class="col-sm-4 col-md-3">
+            <div class="well"> 
+                <div class="well">
+                    <div class="card text-right">
+                      <div class="card-header">
+                        <ul id="members" class="text-left"><h3 class="text-left heading2">Miscellaneous</h3></ul></div>
+                        <div class="card-body" id="photo"><ul id="titles" class="card-title"></ul></div>
+                        <nav class="navbar bg-light">
+                            <ul class="navbar-nav">
+                              <li class="nav-item">
+                                <a class="nav-link" href="#social">Contact us</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="#calendar">Calendar Events</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="../src/pages/imGoing/going.html">I'm going</a>
+                              </li>
+                            </ul>
+                          </nav>
+                          <nav class="navbar navbar-light bg-light">
+                              <form class="form-inline">
+                                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                              </form>
+                            </nav>
+                        <div class="card-footer text-muted heading" id="times" ></div>
+                    </div>
+                  </div>
+            </div>
+         </div>
+      </div>
+   </div>  
 
 <div class="container">
   <div class="row">
     <div class="col-xs-6">
-      <div class="container">
-        <div class="row">
-          <div class="card text-left border border-0 ">
-            <div class="card-header bg-white border border-0">
-              <ul id="calendars" class="text-left bg-white border border-0"></ul>
-            </div>
-              <div class="card-body bg-white border border-0">
-                  <capone-slider></capone-slider>
-                <ul id="titles" class="card-title bg-white border border-0"></ul>
-            </div>
-          </div> 
+      <div class="container"> 
 
   <br/>
   <br/>
@@ -61,59 +90,20 @@
     <div class="col-xs-6">
       <div class="container">
         <div class="row">
-          <div class="card text-right">
-            <div class="card-header">
-              <ul id="member" class="text-left"><h3 class="text-left heading2">Categories</h3></ul></div>
-              <div class="card-body" id="photos"><ul id="title" class="card-title"></ul></div>
-              <div class="card-footer text-muted heading" id="time" >Categories </div>
-          </div>
+          
         </div> 
       </div>
     </div>
   </div>
+</div>
+</div>
 
-</div>
-</div>
   <br/>
   <br/>
-  <div class="col">
-    <div class="card">
-      <div class="card-header">
-        <p class="logo heading">Categories </p>
-      </div>
-        <div class="card-body">
-          <div id="groups" class="text-center">
-          <div class="spinner-border text-dark" role="status">
-          </div>
-          </div>
-            <p class="card-text" id="events"></p>
-          </div>
-        </div>
-      </div>
-    </div>
+  </div>
   </div>
  <br/>
   <ul id="group">
   </ul>
-  <div class="modal" tabindex="-1" role="dialog">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Modal title</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body" id="groupdetails">
-            <p>Modal body text goes here.</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary">Save changes</button>
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-</div>
   </body>
   </html>
