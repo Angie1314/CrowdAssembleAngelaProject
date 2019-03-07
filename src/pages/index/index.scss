@@ -17,10 +17,12 @@ $crowd-assemeble-font:'Libre Barcode 39 Text', cursive;
 $headings:'Padauk', sans-serif;
 $min-widths: 600px;
 $max-widths: 800px;
+$categories:'Righteous', cursive;
 
 @import url('https://fonts.googleapis.com/css?family=Libre+Barcode+39+Text|Ubuntu');
 @import url('https://fonts.googleapis.com/css?family=Padauk');
 @import "~bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Righteous');
 
 .logo{
   font-family:$crowd-assemeble-font;
@@ -33,6 +35,13 @@ $max-widths: 800px;
   color: $crowd-asssemble-logo;
 }
 
+.categories{
+  font-family: $categories;
+  font-size: $logo-size;
+  color:blue;
+}
+
+
 .jumbotron {
   background-color:rgb(72, 81, 214); 
   
@@ -42,9 +51,11 @@ $max-widths: 800px;
   color:$crowd-asssemble-logo;
   font-family: $body-font-size;
 }
+
 .card-body{
   background: #f7f8fa;
 }
+
 .no-border{
   border-width: 0;
 }
@@ -57,7 +68,7 @@ $max-widths: 800px;
 .col-sm-4 {border:1px rgb(95, 92, 92);}
 .well {height:200px;}
 .height1 {height:500px}
-.height2 {height:4600px}
+.height2 {height:2800px}
 
 .pagination {
   float: left;

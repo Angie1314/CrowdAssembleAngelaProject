@@ -17,7 +17,6 @@
 </head>
 
 <body class="container-fluid">
-    <h1>HELLLLLLOOOOOO 2</h1>
     <div class="jumbotron" id="social">
     <social-tag></social-tag>
     </div>
@@ -34,50 +33,22 @@
                 <capone-slider></capone-slider>
             </div>
          </div>
-         <div class="col-sm-4 col-md-6 height2 ">
-            <div class="well">
-              <div class="card text-right">
-                <div class="card-header">
-                  <div class="spinner-border text-dark" role="status"></div>
-                  <ul id="member" class="text-left"><h3 class="text-left heading2">Categories</h3></ul></div>
-                  <div class="card-body" id="photos"><ul id="title" class="card-title"></ul></div>
-                  <div class="card-footer text-muted heading" id="time" >Categories </div>
+         <div class="col-sm-4 col-md-6 height2  ">
+            <div class="well bg-white">
+              <div class="card text-right bg-white">
+                <div class="card-header bg-white">
+                  <ul id="member" class="text-left bg-white"><h3 class="text-left categories bg-white">Categories</h3></ul>
+                  <div class="spinner-border text-dark bg-white" role="status" id="spin"></div></div>
+                  <div class="card-body bg-white" id="photos"><ul id="title" class="card-title bg-white"></ul></div>
+                  <div class="card-footer text-muted heading bg-white" id="info" >Categories </div>
               </div>
             </div>
          </div>
-         <div class="col-sm-4 col-md-3">
-            <div class="well"> 
-                <div class="well">
-                    <div class="card text-right">
-                      <div class="card-header">
-                        <ul id="members" class="text-left"><h3 class="text-left heading2">Miscellaneous</h3></ul></div>
-                        <div class="card-body" id="photo"><ul id="titles" class="card-title"></ul></div>
-                        <nav class="navbar bg-light">
-                            <ul class="navbar-nav">
-                              <li class="nav-item">
-                                <a class="nav-link" href="#social">Contact us</a>
-                              </li>
-                              <li class="nav-item">
-                                <a class="nav-link" href="#calendar">Calendar Events</a>
-                              </li>
-                              <li class="nav-item">
-                                <a class="nav-link" href="../src/pages/imGoing/going.html">I'm going</a>
-                              </li>
-                            </ul>
-                          </nav>
-                          <nav class="navbar navbar-light bg-light">
-                              <form class="form-inline">
-                                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                              </form>
-                            </nav>
-                        <div class="card-footer text-muted heading" id="times" ></div>
-                    </div>
-                  </div>
-            </div>
-         </div>
-      </div>
-   </div>  
+
+  <div class="col-sm-4 col-md-3" >
+    <div class="well"> 
+      <misscell-an></misscell-an>
+  </div>  
 
 <div class="container">
   <div class="row">
@@ -106,5 +77,18 @@
  <br/>
   <ul id="group">
   </ul>
+  </div>
+  </div>
+  </div>
+  <footer class="text-muted categories text-center">Crowd Assemble~  Assembling Crowds
+      <div >
+          <p class="nav-item bg-white">
+              <a class="nav-link bg-white" href="#calendar">Calendar</a>
+          </p>
+          <p class="nav-item bg-white">
+              <a class="nav-link bg-white" href="#social">Contact Us</a>
+          </p>
+      </div>
+</footer>
   </body>
   </html>

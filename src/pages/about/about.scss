@@ -8,6 +8,7 @@ $theme-colors: (
 $heading1:#fff;
 $body-font-size:1.5em;
 $logo-size:2em;
+$heading1Font:1em;
 $body-bg:#fff;
 $general-text:'Ubuntu', sans-serif;
 $general-text-color:#859797;
@@ -17,10 +18,12 @@ $crowd-assemeble-font:'Libre Barcode 39 Text', cursive;
 $headings:'Padauk', sans-serif;
 $min-widths: 600px;
 $max-widths: 800px;
+$categories:'Righteous', cursive;
 
 @import url('https://fonts.googleapis.com/css?family=Libre+Barcode+39+Text|Ubuntu');
 @import url('https://fonts.googleapis.com/css?family=Padauk');
 @import "~bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Righteous');
 
 .logo{
   font-family:$crowd-assemeble-font;
@@ -32,7 +35,11 @@ $max-widths: 800px;
   font-size: $logo-size;
   color: $crowd-asssemble-logo;
 }
-
+.heading1{
+  font-family: sans-serif;
+  font-size:$heading1Font;
+  color: gray;
+}
 .jumbotron {
   background-color:rgb(72, 81, 214); 
   
@@ -46,10 +53,20 @@ $max-widths: 800px;
   background: #f7f8fa;
 }
 
+.categories{
+  font-family: $categories;
+  font-size: $logo-size;
+  color:blue;
+}
+
 .dark-table{
   background-color:rgb(72, 81, 214);
 
 }
+.col-sm-4 {border:1px rgb(95, 92, 92);}
+.well {height:200px;}
+.height1 {height:500px}
+.height2 {height:2800px}
 
 @mixin min{
   @media (min-width: #{$min-widths}) and (max-width: #{$max-widths- 1px}) {

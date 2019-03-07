@@ -1,7 +1,6 @@
 
 class CaponeSlider extends HTMLElement {
-   // onclick="Bot.botChat(${val});"
-
+  
     connectedCallback () {
         let chatTemplate=`
     <button type="button" class="btn border border-0 text-left" data-toggle="modal" data-target="#exampleModal">
@@ -12,7 +11,7 @@ class CaponeSlider extends HTMLElement {
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title heading2" id="exampleModalLabel"><img src="src/foxs.png" alt="foxbot icon"       class="img-fluid img-circle" />Crowd Chat</h5>
+                    <h5 class="modal-title heading2" id="exampleModalLabel"><img src="src/foxs.png" alt="foxbot icon" class="img-fluid img-circle" />Crowd Chat</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span></button>
                 </div>
@@ -30,13 +29,13 @@ class CaponeSlider extends HTMLElement {
             </form>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-dark" >Send Q</button>
+                    <button type="submit" class="btn btn-dark" id="myObj" onclick="">Send Q</button>
                 </div>
             </div>
         </div>
     </div>
 </div> `;
-        let calendarTemplate=`<h1 class="heading2"> Calendar</h1>
+        let calendarTemplate=`<h1 class="categories"> Calendar</h1>
         <div id="simple-date-selector" class="hasDatepicker">
            <div class="ui-datepicker-inline ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" style="display: block;">
              <div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all">
@@ -46,7 +45,7 @@ class CaponeSlider extends HTMLElement {
                <span class="icon-disclosure-right"></span></a><div class="ui-datepicker-title">
                <span class="ui-datepicker-month heading">February</span>&nbsp;<span class="ui-datepicker-year heading">2019</span></div>
             </div>
-            <table class="ui-datepicker-calendar heading2"><thead><tr><th class="ui-datepicker-week-end"><span title="Sunday">Su</span></th>
+            <table class="ui-datepicker-calendar categories"><thead><tr><th class="ui-datepicker-week-end"><span title="Sunday">Su</span></th>
                <th><span title="Monday">Mo</span></th><th><span title="Tuesday">Tu</span></th><th><span title="Wednesday">We</span></th>
                <th><span title="Thursday">Th</span></th><th><span title="Friday">Fr</span></th><th class="ui-datepicker-week-end">
                    <span title="Saturday">Sa</span></th></tr></thead><tbody><tr><td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
@@ -97,36 +96,3 @@ class CaponeSlider extends HTMLElement {
    
   }
   customElements.define('capone-slider', CaponeSlider);
-class Bot {
-    
-    constructor (){
-
-        function botChat(val) {
-            var text=document.getElementById('tf').value;
-            var newLine='\r';
-            if(text==="join"){
-                comment.append(newLine);
-                comment.append("Joining a group is simple. Find the catagory you are interested in and join!");
-                comment.append(newLine);
-                comment.append("Anything else you would like to know?");
-            }
-            if(text==="area"){
-                comment.append("Crow Assemble are available cross country! Click and see where your nearst groupd is located!");
-                comment.append(newLine);
-                comment.append("Anything else you would like to know?");
-    
-            }
-            if(text==="date"){
-                comment.append("Crow Assemble groups run from Monday through to Sunday! Join up!");
-                comment.append(newLine);
-                comment.append("Anything else you would like to know?");
-    
-            }else{
-                comment.append(newLine);
-                comment.append("Didnt Quite get that try ask again!");
-            }
-            
-    }
-
-    }
-}

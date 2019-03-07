@@ -3,6 +3,9 @@ import 'bootstrap';
 import Calendar from '../../components/calendarCreation.js';
 import Social from '../../components/socialTags.js';
 import Swal from 'sweetalert2';
+import Miscell from '../../components/miscellaneous.js';
+import Footer from '../../components/footer.js';
+
 
 $(function () {
     const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
@@ -18,52 +21,30 @@ $(function () {
         url: `${proxyUrl}${baseUrl}/find/topic_categories?key=${key}&category=1,2,3&sign=true`,
         success: function(groups) {
             $mem.find('.spinner-border').addClass('d-none');
+            $items.find('#spin').addClass('d-none');
 
             $.each(groups, function(i, group) {
+                console.log(group.category_ids);
+
                 $mem.append(`
-                    <div class="border border-light">
-                        <h5 class="card-title heading">${group.name}</h5> 
-                        <button class="btn btn-dark btn-lg btn-block mb-2 mt-2 data-toggle="tooltip" data-placement="top" title="Find group details here" onclick="page.func(${group.id});">Group Details</button>
-                    </div>
                    
-                `);
-            
+                    <table class="table table-striped ">
+                        <tbody>
+                            <tr>
+                           
+                            <td class="text-center">
+                                <h5><a class="card-title categories" title="Click to view Groups" onclick="page.funcs(${group.category_ids});" 
+                                href="javascript:void(0);">${group.name} </h5>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    `);
             });
-            
         },
         error: errorFunction
     });
-
-
-
-
-    // $(function () {
-    //     const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
-    //     const baseUrl = 'https://api.meetup.com/';
-    //     const key = '79265535896f4f69573a5c191e4947';
-    
-    //     var $items = $('#groups');
-    //     var $mem=$('#member');
-
-    //     $.ajax({
-    //         type: 'GET' ,
-    //         url: `${proxyUrl}${baseUrl}/2/categories?key=${key}&category=1,2,3&sign=true`,
-    //         success: function(groups) {
-    //             $items.find('.spinner-border').addClass('d-none');
-    
-    //             $.each(groups.results, function(i, group) {
-    //                 $mem.append(`
-    //                 <div class="border border-light">
-    //                 <h5 class="card-title heading">${group.name}</h5> 
-    //                 <button class="btn btn-dark btn-lg btn-block" onclick="page.funcs(${group.id});">See events</button>
-    //               </div>`);
-    //             });    
-    //         },
-            
-    //         error: errorFunction
-    //     });
-        
-    // });
+});
 
     function errorFunction(xhr, status, error){
         console.log(error);
@@ -81,10 +62,11 @@ $(function () {
             
             funcs: function(val) {
     
-                window.location.href = `about.html?category_id=${val}`;
+                window.location.href = `about.html?category_ids=${val}`;
             },
             
             responseFunc: function(val) {
+                alert("hdhddhdhd");
                 var text=document.getElementById('tf').value;
                 var newLine='\r';
                 if(text==="join"){
@@ -108,11 +90,10 @@ $(function () {
                     comment.append(newLine);
                     comment.append("Didnt Quite get that try ask again!");
                 }
-                
+
             },
             error: errorFunction
         };
-    
+        
 
 
-    });
