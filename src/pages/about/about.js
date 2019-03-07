@@ -5,10 +5,12 @@ import EventsComponents from '../../components/eventsComponent';
 import Swal from 'sweetalert2';
 import Miscell from '../../components/miscellaneous.js';
 import GroupDetails from '../../components/groupDetails.js';
-//import Groups from '../../components/groups.js';
+import Footer from '../../components/footer.js';
+//import Events from '../../components/events.js';
+//import Groupings  from '../../components/groups.js';
 
+//customElements.define('group-photos',Groupings );
 
-//customElements.define('groups-here', Groups );
 
 $(function (parameter) {
     const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
@@ -25,7 +27,12 @@ $(function (parameter) {
         url: `${proxyUrl}${baseUrl}find/groups?key=${key}&category=${category}&sign=true`,
         success: function(groups) {
             $items.find('.spinner-border').addClass('d-none');
-
+            // let name= document.createElement('group-name');
+            // name.groupName = group.name;
+            // let description=document.createElement('group-name');
+            // description,groupName=group.description;
+            // let photo=document.createElement('group-name');
+            // photo.groupPhoto=group.organizer.photo.thumb_link;
             
             $.each(groups, function(i, group) {
                 $items.append(`

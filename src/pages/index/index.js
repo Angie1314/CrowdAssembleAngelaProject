@@ -5,6 +5,7 @@ import Social from '../../components/socialTags.js';
 import Swal from 'sweetalert2';
 import Miscell from '../../components/miscellaneous.js';
 import Footer from '../../components/footer.js';
+import Cate from '../../components/categories.js';
 
 
 $(function () {
@@ -31,15 +32,13 @@ $(function () {
                     <table class="table table-striped ">
                         <tbody>
                             <tr>
-                           
                             <td class="text-center">
                                 <h5><a class="card-title categories" title="Click to view Groups" onclick="page.funcs(${group.category_ids});" 
                                 href="javascript:void(0);">${group.name} </h5>
                                 </td>
                             </tr>
                         </tbody>
-                    </table>
-                    `);
+                    </table>`);
             });
         },
         error: errorFunction
@@ -64,36 +63,5 @@ $(function () {
     
                 window.location.href = `about.html?category_ids=${val}`;
             },
-            
-            responseFunc: function(val) {
-                alert("hdhddhdhd");
-                var text=document.getElementById('tf').value;
-                var newLine='\r';
-                if(text==="join"){
-                    comment.append(newLine);
-                    comment.append("Joining a group is simple. Find the catagory you are interested in and join!");
-                    comment.append(newLine);
-                    comment.append("Anything else you would like to know?");
-                }
-                if(text==="area"){
-                    comment.append("Crow Assemble are available cross country! Click and see where your nearst groupd is located!");
-                    comment.append(newLine);
-                    comment.append("Anything else you would like to know?");
-    
-                }
-                if(text==="date"){
-                    comment.append("Crow Assemble groups run from Monday through to Sunday! Join up!");
-                    comment.append(newLine);
-                    comment.append("Anything else you would like to know?");
-    
-                }else{
-                    comment.append(newLine);
-                    comment.append("Didnt Quite get that try ask again!");
-                }
-
-            },
-            error: errorFunction
         };
         
-
-
