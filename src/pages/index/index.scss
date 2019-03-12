@@ -1,10 +1,9 @@
 @import 'src/pages/index/variables.scss';
+
 $theme-colors: (
   "primary": #acb3b3,
-  "muted":#bac2ca ,
-  
+  "muted":#bac2ca
 );
-
 
 @import url('https://fonts.googleapis.com/css?family=Libre+Barcode+39+Text|Ubuntu');
 @import url('https://fonts.googleapis.com/css?family=Padauk');
@@ -13,10 +12,11 @@ $theme-colors: (
 
 .logo{
   font-family:$crowd-assemeble-font;
-  font-size:$logo-size;
-  color:$logo;
+  font-size: $logo-size;
+  color: $logo;
 }
-.heading{
+
+.heading {
   font-family:$crowd-assemeble-font;
   font-size: $logo-size;
   color: $crowd-asssemble-logo;
@@ -25,43 +25,39 @@ $theme-colors: (
 .categories{
   font-family: $categories;
   font-size: $logo-size;
-  color:blue;
+  color: blue;
 }
-
 
 .jumbotron {
   background-color:rgb(72, 81, 214); 
   
 }
 
-.general-text{
-  color:$crowd-asssemble-logo;
+.general-text {
+  color: $crowd-asssemble-logo;
   font-family: $body-font-size;
 }
-
 .card-body{
   background: #f7f8fa;
 }
 
-.no-border{
-  border-width: 0;
-}
-
 .dark-table{
   background-color:rgb(72, 81, 214);
-
 }
 
 .col-sm-4 {border:1px rgb(95, 92, 92);}
-.well {height:200px;}
-.height1 {height:500px}
-.height2 {height:2800px}
+
+.height-of-card{height:200px;}
+
+.height-of-card-when-expanded{height:500px}
+
+.height-of-card-expanded-full{height:2800px}
 
 .pagination {
   float: left;
-  }
+}
 
-@mixin min{
+@mixin min {
   @media (min-width: #{$min-widths}) and (max-width: #{$max-widths- 1px}) {
     @content;
     word-wrap: break-word;
@@ -81,6 +77,7 @@ $theme-colors: (
       letter-spacing: -1em;
       overflow:hidden;
   }
+
   .inline-block-row .col-sm-4 {
       word-spacing: normal;
       vertical-align: top;
@@ -89,8 +86,9 @@ $theme-colors: (
       float:none;
   }
 }
+
 @media (min-width:992px) {
   .inline-block-row .col-md-3 {
-      float:none;
+      float: none;
   }
 }

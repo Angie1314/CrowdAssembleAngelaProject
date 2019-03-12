@@ -1,74 +1,82 @@
-
 $theme-colors: (
   "primary": #acb3b3,
-  "muted":#bac2ca ,
-  
+  "muted": #bac2ca
 );
 
-$heading1:#fff;
-$body-font-size:1.5em;
-$logo-size:2em;
-$heading1Font:1em;
-$body-bg:#fff;
-$general-text:'Ubuntu', sans-serif;
-$general-text-color:#859797;
-$crowd-asssemble-logo:rgb(119, 109, 109);
-$logo:rgb(247, 242, 242);
-$crowd-assemeble-font:'Libre Barcode 39 Text', cursive;
-$headings:'Padauk', sans-serif;
+$heading1: #fff;
+$body-font-size: 16px;
+$logo-size: 2em;
+$heading1Font: 1em;
+$body-bg: #fff;
+$general-text: "Ubuntu", sans-serif;
+$general-text-color: #859797;
+$crowd-asssemble-logo: rgb(119, 109, 109);
+$logo: rgb(247, 242, 242);
+$crowd-assemeble-font: "Libre Barcode 39 Text", cursive;
+$headings: "Padauk", sans-serif;
 $min-widths: 600px;
 $max-widths: 800px;
-$categories:'Righteous', cursive;
+$categories: "Righteous", cursive;
 
-@import url('https://fonts.googleapis.com/css?family=Libre+Barcode+39+Text|Ubuntu');
-@import url('https://fonts.googleapis.com/css?family=Padauk');
+@import url("https://fonts.googleapis.com/css?family=Libre+Barcode+39+Text|Ubuntu");
+@import url("https://fonts.googleapis.com/css?family=Padauk");
 @import "~bootstrap/scss/bootstrap";
-@import url('https://fonts.googleapis.com/css?family=Righteous');
+@import url("https://fonts.googleapis.com/css?family=Righteous");
 
-.logo{
-  font-family:$crowd-assemeble-font;
-  font-size:$logo-size;
-  color:$logo;
+.logo {
+  font-family: $crowd-assemeble-font;
+  font-size: $logo-size;
+  color: $logo;
 }
-.heading{
-  font-family:$crowd-assemeble-font;
+
+.heading {
+  font-family: $crowd-assemeble-font;
   font-size: $logo-size;
   color: $crowd-asssemble-logo;
 }
-.heading1{
+
+.heading1 {
   font-family: sans-serif;
-  font-size:$heading1Font;
+  font-size: $heading1Font;
   color: gray;
 }
+
 .jumbotron {
-  background-color:rgb(72, 81, 214); 
-  
+  background-color: rgb(72, 81, 214);
 }
 
-.general-text{
-  color:$crowd-asssemble-logo;
+.general-text {
+  color: $crowd-asssemble-logo;
   font-family: $body-font-size;
 }
-.card-body{
+
+.card-body {
   background: #f7f8fa;
 }
 
-.categories{
+.categories {
   font-family: $categories;
   font-size: $logo-size;
-  color:blue;
+  color: blue;
 }
 
-.dark-table{
-  background-color:rgb(72, 81, 214);
-
+.col-sm-4 {
+  border: 1px rgb(95, 92, 92);
 }
-.col-sm-4 {border:1px rgb(95, 92, 92);}
-.well {height:200px;}
-.height1 {height:500px}
-.height2 {height:2800px}
 
-@mixin min{
+.height-of-card{
+  height: 200px;
+}
+
+.height-of-card-when-expanded{
+  height: 500px;
+}
+
+.height-of-card-expanded-full{
+  height: 2800px;
+}
+
+@mixin min {
   @media (min-width: #{$min-widths}) and (max-width: #{$max-widths- 1px}) {
     @content;
     word-wrap: break-word;

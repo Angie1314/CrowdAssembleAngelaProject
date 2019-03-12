@@ -1,4 +1,4 @@
-export default class Groups extends HTMLElement {
+export default class GroupElement extends HTMLElement {
     constructor(){
         super();
     }
