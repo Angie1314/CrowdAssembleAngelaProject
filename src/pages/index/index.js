@@ -32,11 +32,14 @@ $(() => {
                 <tbody>
                    <tr>
                       <td class="text-center">
-                         <h5><a
-                            class="card-title categories" 
+                         <h5 class="text-left categories"><img src=${group.photo.thumb_link}>
+                            <a
                             title="Click to view Groups" 
                             onclick="page.funcs(${group.category_ids});" 
-                            href="javascript:void(0);">${group.name} </h5>
+                            href="javascript:void(0);">${group.name} 
+                            </a> 
+                         </h5>
+                         <td id="timing"></td>
                       </td>
                    </tr>
                 </tbody>
