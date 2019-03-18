@@ -27,7 +27,7 @@ class UserProfileElement extends HTMLElement {
                   placeholder="Username" required="true">
             </div>
             <img id="imageUpload" src="src/images/avatar.png" alt="Upload your
-               image" class="rounded-circle" required="true" />
+               image" class="rounded-circle img-fluid" required="true" />
             <input type="file" onchange="readURL(this);" />
             <br/>
             <br/>
