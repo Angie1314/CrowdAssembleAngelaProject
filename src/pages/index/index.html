@@ -1,110 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>Crowd Assemble</title>
-
-		<meta charset="UTF-8">
-		<meta http-equiv="cache-control" content="no-cache" />
-		<meta http-equiv="pragma" content="no-cache" />
-		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		<script> 
-		function sendButton(){
-			var userText = document.getElementById('tf').value;
-			var spaceChar="\r";
-
-			document.getElementById('textAreaResponse').append(userText+ spaceChar);
-            if(userText.toLowerCase()=="join".toLowerCase()){
-				document.getElementById('textAreaResponse').append(spaceChar+"Joining is simple. Find a group that you like and join today.");
-			}
-				
-			}</script>
-		<script>
-			function readURL(input) {
-    			if (input.files && input.files[0]) {
-        			var reader = new FileReader();
-
-        			reader.onload = function (e) {
-            		$('#imageUpload')
-                	.attr('src', e.target.result)
-                	.width(150)
-                	.height(200);
-        			};
-
-        			reader.readAsDataURL(input.files[0]);
-    			}
-			}			
-		</script>
-		<script>
-			window.onload = function() {
-				if (localStorage) {
-
-				document.getElementById('contactForm').addEventListener('submit', function() {
-
-				var name = document.getElementById('name').value; 
-	
-
-				localStorage.setItem('name', name);
-
-				});
-			}	
-		}
-		
-		</script>
-		<script>
-			window.onload=function(){
-
-			var names=localStorage.getItem('name');
-			alert("Welcome back "+names);
-		}			
- 		</script>
-	</head>
-<body class="container-fluid">
-
-	<div class="jumbotron" id="social">
-		<social-tag></social-tag>
-	</div>
-
-	<div class="text-center general-text">
-		<div>
-			<img src="src/images/chevron.png" class="text-left img-fluid" alt="Chevron
-				down arrow">
-				Assembly Seek Below
-			<img src="src/images/chevron.png" class="text-left img-fluid" alt="Chevron
-				down arrow">
-		</div>
-	</div>
-
-	<br/>
-	<br/>
-
-	<div class="container-fluid">
-		<div class="row inline-block-row">
-			<div class="col-sm-4 col-md-3">
-				<div class="height-of-card height-of-card-when-expanded" id="calendar">
-					<calendar-element> </calendar-element>
-				</div>
-				<user-profile-tag></user-profile-tag>
-					</div>
-					<div class="col-sm-4 col-md-6 height-of-card-expanded-full">
-						<div class="height-of-card bg-white">
-							<div class="category"> 
-								<group-categoires></group-categoires>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-4 col-md-3 text-center">
-						<div class="height-of-card">
-							<search-element></search-element>
-						</div>
-					</div>
-				</div>
-			</div>
-
-<footer class="text-muted categories text-center">
-	<footer-element></footer-element>
-</footer>
-</body>
+   <head>
+      <title>Crowd Assemble</title>
+      <meta charset="UTF-8">
+      <meta http-equiv="cache-control" content="no-cache" />
+      <meta http-equiv="pragma" content="no-cache" />
+      <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <script> 
+         function sendButton(){
+         	var userText = document.getElementById('tf').value;
+         	var spaceChar="\r";
+         
+         	document.getElementById('textAreaResponse').append(userText+ spaceChar);
+                   if(userText.toLowerCase()=="join".toLowerCase()){
+         		document.getElementById('textAreaResponse').append(spaceChar+"Joining is simple. Find a group that you like and join today.");
+         	}
+         		
+         	}
+      </script>
+      <script>
+         function readURL(input) {
+          			if (input.files && input.files[0]) {
+              			var reader = new FileReader();
+         
+              			reader.onload = function (e) {
+                  		$('#imageUpload')
+                      	.attr('src', e.target.result)
+                      	.width(150)
+                      	.height(200);
+              			};
+         
+              			reader.readAsDataURL(input.files[0]);
+          			}
+         }			
+      </script>
+      <script>
+         window.onload = function() {
+         	if (localStorage) {
+         
+         	document.getElementById('contactForm').addEventListener('submit', function() {
+         
+         	var name = document.getElementById('name').value; 
+         
+         
+         	localStorage.setItem('name', name);
+         
+         	});
+         }	
+         }
+         
+      </script>
+      <script>
+         window.onload=function(){
+         
+         var names=localStorage.getItem('name');
+         alert("Welcome back "+names);
+         }			
+      </script>
+   </head>
+   <body class="container-fluid">
+      <div class="jumbotron" id="social">
+         <social-tag></social-tag>
+      </div>
+      <div class="text-center general-text">
+         <div>
+            <img src="src/images/chevron.png" class="text-left img-fluid" alt="Chevron
+               down arrow">
+            Assembly Seek Below
+            <img src="src/images/chevron.png" class="text-left img-fluid" alt="Chevron
+               down arrow">
+         </div>
+      </div>
+      <br/>
+      <br/>
+      <div class="container-fluid">
+         <div class="row inline-block-row">
+            <div class="col-sm-4 col-md-3">
+               <div class="height-of-card height-of-card-when-expanded" id="calendar">
+                  <calendar-element> </calendar-element>
+               </div>
+               <user-profile-tag></user-profile-tag>
+            </div>
+            <div class="col-sm-4 col-md-6 height-of-card-expanded-full">
+               <div class="height-of-card bg-white">
+                  <div class="category">
+                     <group-categoires></group-categoires>
+                  </div>
+               </div>
+            </div>
+            <div class="col-sm-4 col-md-3 text-center">
+               <div class="height-of-card">
+                  <search-element></search-element>
+               </div>
+            </div>
+         </div>
+      </div>
+      <footer class="text-muted categories text-center">
+         <footer-element></footer-element>
+      </footer>
+   </body>
 </html>
