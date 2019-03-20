@@ -24,8 +24,7 @@ $(() => {
             $mem.find('.spinner-border').addClass('d-none');
             $items.find('#spin').addClass('d-none');
 
-            $.each(groups, function (i, group) {
-                console.log(group.category_ids);
+            $.each(groups, function (i, group) { 
 
                 $mem.append(`
                 <table class="table table-striped">

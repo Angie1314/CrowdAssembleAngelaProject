@@ -1,6 +1,6 @@
 class GroupDetailElement extends HTMLElement {
     connectedCallback() {
-        var templateDetails = ` 
+        this.innerHTML = ` 
         <div class="card  bg-white ">
             <div class="card-header bg-white"><p class="categories  bg-white ">Group Details </p></div>
                 <div class="card-body bg-white">
@@ -11,8 +11,6 @@ class GroupDetailElement extends HTMLElement {
                     </div>
                 </div>
         </div>`;
-        this.innerHTML = templateDetails;
-        ;
     }
 }
 
